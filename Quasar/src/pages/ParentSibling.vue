@@ -1,6 +1,6 @@
 <template>
   <q-page class="row items-center justify-evenly">
-		<p>Test Child</p>
+		<h1>Parent Sibling Content</h1>
 	</q-page>
 </template>
 
