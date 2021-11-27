@@ -10,9 +10,14 @@ interface navInterface {
  * This whole nav variable can be import as a 
  * JSON object in production
  */
+
+/**
+ * TODO: add in path parameter, so title can contains space
+ */
 const nav = [
   {
     title: 'GrandParent',
+    path:'grandparent',
     description: 'Grand Parend Level Content',
     children: [
       {
