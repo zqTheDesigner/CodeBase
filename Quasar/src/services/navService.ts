@@ -2,12 +2,14 @@
 
 interface navInterface {
   title: string;
+  pathName?: string;
+  page: string;
   description?: string;
   children?: navInterface[];
 }
 
 /**
- * This whole nav variable can be import as a 
+ * This whole nav variable can be import as a
  * JSON object in production
  */
 
@@ -16,32 +18,45 @@ interface navInterface {
  */
 const nav = [
   {
-    title: 'GrandParent',
-    path:'grandparent',
+    title: 'Grand Parent',
+    pathName: 'grand_parent',
+    page: 'GrandParent.vue',
     description: 'Grand Parend Level Content',
     children: [
       {
         title: 'Parent',
+        page: 'Parent.vue',
         description: 'Parent Level Content',
         children: [
           {
             title: 'Child',
+            page: 'Child.vue',
             description: 'Child Level Content',
             children: [
-              { title: 'GrandChild', description: 'Grand Chuld Level Content' },
+              {
+                title: 'GrandChild',
+                page: 'GrandChild.vue',
+                description: 'Grand Chuld Level Content',
+              },
             ],
           },
         ],
       },
       {
         title: 'ParentSibling',
+        page: 'ParentSibling.vue',
         description: 'ParentSibling Content',
         children: [
           {
             title: 'Child',
+            page: 'Child.vue',
             description: 'Child Level Content',
             children: [
-              { title: 'GrandChild', description: 'Grand Chuld Level Content' },
+              {
+                title: 'GrandChild',
+                page: 'GrandChild.vue',
+                description: 'Grand Chuld Level Content',
+              },
             ],
           },
         ],
@@ -49,7 +64,9 @@ const nav = [
     ],
   },
   {
-    title: 'GrandParentSibling',
+    title: 'Data Visualisation',
+    pathName:'data_viz',
+    page: 'DataViz.vue',
     description: 'Test Page content',
   },
 ];
@@ -73,7 +90,9 @@ const generateRoutes = (n: navInterface[]) => {
 
   const addNavItems = (m: navInterface[], p = '') =>
     m.forEach((navItem) => {
-      const path = `${p}/${navItem.title}`;
+      const path = `${p}/${
+        navItem.pathName ? navItem.pathName : navItem.title
+      }`;
 
       if (navItem.children) {
         /* Recursive function to handle child path */
@@ -82,7 +101,7 @@ const generateRoutes = (n: navInterface[]) => {
 
       navItems.push({
         path,
-        component: () => import(`pages/${navItem.title}.vue`),
+        component: () => import(`pages/${navItem.page}`),
       });
     });
 

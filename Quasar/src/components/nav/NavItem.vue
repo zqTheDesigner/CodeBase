@@ -1,8 +1,9 @@
 <template>
   <div :class="`bg-grey-${nestLevel + 2}`">
     <q-expansion-item
-      :to="parentPath + '/' + item.title"
+      :to="parentPath + '/' + (item.pathName ? item.pathName : item.title)"
       :label="'&nbsp;&nbsp;'.repeat(nestLevel) + item.title"
+      :expand-icon-class="item.children ? '' : 'hidden'"
     >
       <div v-if="item.children">
         <!-- 
@@ -14,7 +15,9 @@
           :key="childItem.title"
           :item="childItem"
           :nest-level="nestLevel + 1"
-          :parent-path="parentPath + '/' + item.title"
+          :parent-path="
+            parentPath + '/' + (item.pathName ? item.pathName : item.title)
+          "
         />
       </div>
     </q-expansion-item>
