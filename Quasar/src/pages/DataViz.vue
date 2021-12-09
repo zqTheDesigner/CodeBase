@@ -8,7 +8,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import GoogleCharts from 'src/comp_modules/GoogleCharts/GoogleCharts.vue';
+import GoogleCharts from 'src/comp_packs/GoogleCharts/GoogleCharts.vue';
 
 export default defineComponent({
   name: '',

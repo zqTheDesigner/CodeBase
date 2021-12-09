@@ -1,0 +1,261 @@
+// Import this file from app.scss with
+// @import './q-motion.scss';
+
+@keyframes bubbleBounce {
+  0% {
+    transform: scale(1);
+    bottom: 0%;
+    left: 0%;
+  }
+
+  10% {
+    transform: scale(1.2);
+    bottom: 50%;
+    left: 50%;
+  }
+
+  20% {
+    transform: scale(1.5);
+    bottom: 75%;
+    left: 30%;
+  }
+
+  30% {
+    transform: scale(1.4);
+    bottom: 40%;
+    left: 10%;
+  }
+
+  40% {
+    transform: scale(1);
+    bottom: 30%;
+    left: 50%;
+  }
+
+  50% {
+    transform: scale(0.8);
+    bottom: 0%;
+    left: 30%;
+  }
+
+  60% {
+    transform: scale(1.2);
+    bottom: 40%;
+    left: 50%;
+  }
+
+  70% {
+    transform: scale(1.4);
+    bottom: 70%;
+    right: 60%;
+  }
+
+  80% {
+    transform: scale(1);
+    bottom: 40%;
+    left: 20%;
+  }
+
+  90% {
+    transform: scale(0.8);
+    bottom: 10%;
+    left: 30%;
+  }
+
+  100% {
+    transform: scale(1);
+    bottom: 0%;
+    left: 0%;
+  }
+}
+
+@keyframes bubbleBounce2 {
+  0% {
+    transform: scale(1);
+    top: 20%;
+    right: 0%;
+  }
+
+  10% {
+    transform: scale(1.2);
+    top: 30%;
+    right: 60%;
+  }
+
+  20% {
+    transform: scale(1.5);
+    top: 75%;
+    right: 30%;
+  }
+
+  30% {
+    transform: scale(1.4);
+    top: 50%;
+    right: 20%;
+  }
+
+  40% {
+    transform: scale(1);
+    top: 20%;
+    right: 50%;
+  }
+
+  50% {
+    transform: scale(0.8);
+    top: 0%;
+    right: 30%;
+  }
+
+  60% {
+    transform: scale(1.2);
+    top: 30%;
+    right: 10%;
+  }
+
+  70% {
+    transform: scale(1.4);
+    bottom: 60%;
+    right: 30%;
+  }
+
+  80% {
+    transform: scale(1);
+    top: 40%;
+    left: 20%;
+  }
+
+  90% {
+    transform: scale(0.8);
+    top: 60%;
+    right: 10%;
+  }
+
+  100% {
+    transform: scale(1);
+    top: 80%;
+    right: 0%;
+  }
+}
+
+@keyframes parallelTopRight {
+  0% {
+    left: 42%;
+    top: -8.5%;
+  }
+
+  5% {
+    left: 44%;
+    top: -10%;
+  }
+
+  10% {
+    left: 43%;
+    top: -9%;
+  }
+
+  20% {
+    left: 46%;
+    top: -14%;
+  }
+
+  40% {
+    left: 42%;
+    top: -8.5%;
+  }
+
+  100% {
+    left: 42%;
+    top: -8.5%;
+  }
+}
+
+@keyframes parallelTopLeft {
+  0% {
+    left: 40%;
+    top: 45%;
+    opacity: 0.8;
+  }
+
+  50% {
+    left: 30%;
+    top: 35%;
+    opacity: 0.4;
+  }
+
+  100% {
+    left: 40%;
+    top: 45%;
+    opacity: 0.8;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverseRotate {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes scaleBounce {
+  0% {
+    transform: scale(1) rotate(0);
+    opacity: 0.6;
+  }
+
+  40% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) rotate(360);
+    opacity: 0.6;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    left: -20%;
+  }
+
+  30% {
+    left: 12%;
+  }
+
+  40% {
+    left: 0;
+  }
+
+  50% {
+    left: 9%;
+  }
+  60% {
+    left: 6%;
+  }
+
+  90% {
+    left: -10%;
+  }
+
+  100% {
+    left: -20%;
+  }
+}

@@ -1,10 +1,10 @@
-Each folder inside comp_modules contains both html display layer and service files.
+Each folder inside comp_packs contains both html display layer and service files.
 
 Purpose of this folder is to create ready to use modules for future projects.
 
-A comp_module looks like this:
+A comp_pack looks like this:
 
-comp_module_name
+comp_pack_name
 ├── README.md
 ├── ModuleComponent.vue
 ├── ModuleService.vue
