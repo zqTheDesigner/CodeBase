@@ -4,6 +4,7 @@
 // Material Design Colors
 // This list contains all material design colors in Quasar naming standard
 // Some of the colors been disabled for faster scss rendering
+
 // Strongly recommend to disable colors that not in use
 $colors: (
   'sentient-beige': #cbac81,
@@ -296,7 +297,7 @@ $colors: (
   // 'blue-grey-11': #cfd8dc,
   // 'blue-grey-12': #b0bec5,
   // 'blue-grey-13': #78909c,
-  // 'blue-grey-14': #455a64,,,,,,,,
+  // 'blue-grey-14': #455a64,,,,,,,,,,,
 );
 
 $sizeMap: (
@@ -368,4 +369,24 @@ $borderWidthBase: 0.06rem;
   left: 0;
   bottom: 0;
   transform: translateY(-50%);
+}
+
+// Dividers
+.q-divider-base-class {
+  // Split botder width so it can use together with q-border-{size}
+  border-top-width: 0px !important;
+  border-left-width: 0px !important;
+  border-color: black; // default border color
+}
+.q-vertical-divider {
+  @extend .q-divider-base-class;
+  border-bottom-width: 0px !important;
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+.q-horizontal-divider {
+  @extend .q-divider-base-class;
+  border-right-width: 0px !important;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
