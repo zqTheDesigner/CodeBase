@@ -297,7 +297,11 @@ $colors: (
   // 'blue-grey-11': #cfd8dc,
   // 'blue-grey-12': #b0bec5,
   // 'blue-grey-13': #78909c,
-  // 'blue-grey-14': #455a64,,,,,,,,,,,
+  /* 
+  Always keep the last element active, else everytime
+  format the code VSCode will add in an  extra comma.
+  */
+    'blue-grey-14': #455a64,
 );
 
 $sizeMap: (

@@ -11,11 +11,15 @@ interface navInterface {
 /**
  * This whole nav variable can be import as a
  * JSON object in production
+ *
+ * page can be nested in sub folders, as long as
+ * it's inside the page folder,just use the path
+ *
+ * use : props: { description: { type: String } }
+ * and : <div v-html="description" />
+ * to in the component to read the descriptions
  */
 
-/**
- * TODO: add in path parameter, so title can contains space
- */
 const nav = [
   {
     title: 'Grand Parent',
@@ -81,6 +85,12 @@ const nav = [
     pathName: 'bg_pattern',
     page: 'Backgrounds.vue',
     description: 'different animated backgrounds',
+  },
+  {
+    title: 'Google Map',
+    pathName: 'g_map',
+    page: 'GoogleMapExample.vue',
+    description: 'Some useful google map functions. For costing purpose, each day been limited to 300 api calls.',
   },
 ];
 
