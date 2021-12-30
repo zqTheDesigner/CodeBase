@@ -3,9 +3,13 @@
     <h3 class="q-mx-none">Extended Style</h3>
     <div v-html="description" class="q-mb-lg" />
 
-    <div>
-      Download q-extended-style.scss
-      <FileDownloader />
+    <div class="row items-center q-mb-md">
+      <p class="q-pa-ma-none">Download q-extended-style.scss</p>
+
+      <FileDownloader
+        class="q-mx-sm"
+        url="https://raw.githubusercontent.com/zqTheDesigner/CodeBase/main/Quasar/src/css/q-extended-style.scss"
+      />
     </div>
 
     <Column4
@@ -98,7 +102,7 @@
             <code class="bg-grey-2 q-px-xs">q-border-{size variable}</code>
           </p>
         </div>
-        <div class="q-gutter-xs bg-green-alpha-2 q-pa-md">
+        <div class="q-gutter-xs bg-amber-alpha-2 q-pa-md">
           <div
             v-for="i in 5"
             :key="i"
@@ -122,7 +126,7 @@
             for different background color transprancy.
           </p>
         </div>
-        <div class="q-gutter-xs bg-green-alpha-2 q-pr-sm q-pt-xs q-pb-sm">
+        <div class="q-gutter-xs bg-amber-alpha-2 q-pa-md">
           <div
             v-for="i in 5"
             :key="i"

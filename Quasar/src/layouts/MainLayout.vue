@@ -18,9 +18,10 @@
 					call it with @click? 
 					-->
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-toolbar-title class="full-width text-center">
+          <q-icon name="home" />
+          <router-link to="/" class="text-white"> Quasar Code Base</router-link>
+        </q-toolbar-title>
       </q-toolbar>
     </q-header>
 

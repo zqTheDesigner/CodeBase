@@ -21,52 +21,52 @@ interface navInterface {
  */
 
 const nav = [
-  {
-    title: 'Grand Parent',
-    pathName: 'grand_parent',
-    page: 'GrandParent.vue',
-    description: 'Grand Parend Level Content',
-    children: [
-      {
-        title: 'Parent',
-        page: 'Parent.vue',
-        description: 'Parent Level Content',
-        children: [
-          {
-            title: 'Child',
-            page: 'Child.vue',
-            description: 'Child Level Content',
-            children: [
-              {
-                title: 'GrandChild',
-                page: 'GrandChild.vue',
-                description: 'Grand Chuld Level Content',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        title: 'ParentSibling',
-        page: 'ParentSibling.vue',
-        description: 'ParentSibling Content',
-        children: [
-          {
-            title: 'Child',
-            page: 'Child.vue',
-            description: 'Child Level Content',
-            children: [
-              {
-                title: 'GrandChild',
-                page: 'GrandChild.vue',
-                description: 'Grand Chuld Level Content',
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   title: 'Grand Parent',
+  //   pathName: 'grand_parent',
+  //   page: 'GrandParent.vue',
+  //   description: 'Grand Parend Level Content',
+  //   children: [
+  //     {
+  //       title: 'Parent',
+  //       page: 'Parent.vue',
+  //       description: 'Parent Level Content',
+  //       children: [
+  //         {
+  //           title: 'Child',
+  //           page: 'Child.vue',
+  //           description: 'Child Level Content',
+  //           children: [
+  //             {
+  //               title: 'GrandChild',
+  //               page: 'GrandChild.vue',
+  //               description: 'Grand Chuld Level Content',
+  //             },
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       title: 'ParentSibling',
+  //       page: 'ParentSibling.vue',
+  //       description: 'ParentSibling Content',
+  //       children: [
+  //         {
+  //           title: 'Child',
+  //           page: 'Child.vue',
+  //           description: 'Child Level Content',
+  //           children: [
+  //             {
+  //               title: 'GrandChild',
+  //               page: 'GrandChild.vue',
+  //               description: 'Grand Chuld Level Content',
+  //             },
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     title: 'Data Visualisation',
     pathName: 'data_viz',
