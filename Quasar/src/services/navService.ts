@@ -78,7 +78,7 @@ const nav = [
     pathName: 'extended_style',
     page: 'ExtendedStyle.vue',
     description:
-      'Page for extended css style, access these styles by copy and embed <code class="bg-grey-2 q-px-sm">q-style-extended.scss</code> to <code class="bg-grey-2 q-px-sm">app.scss</code>. Take note, comment not used color variables as much as possible, else the css file size will be HUGE',
+      'Extended css style for Quasar framework, access these styles by copy and embed <code class="bg-grey-2 q-px-sm">q-extended-style.scss</code> to <code class="bg-grey-2 q-px-sm">app.scss</code>. Take note, comment not used color variables as much as possible, else the css file size will be HUGE',
   },
   {
     title: 'Backgrounds',
@@ -90,7 +90,15 @@ const nav = [
     title: 'Google Map',
     pathName: 'g_map',
     page: 'GoogleMapExample.vue',
-    description: 'Some useful google map functions. For costing purpose, each day been limited to 300 api calls.',
+    description:
+      'Some useful google map functions. For costing purpose, each day been limited to 300 api calls.',
+  },
+  {
+    title: 'Containers',
+    pathName: 'containers',
+    page: 'Containers.vue',
+    description: 'Some handy mobile responsive containers',
+    children: [],
   },
 ];
 

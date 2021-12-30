@@ -1,5 +1,5 @@
 // Import this file from app.scss with
-// @import './q-style-extend.scss';
+// @import './q-extended-style.scss';
 
 // Material Design Colors
 // This list contains all material design colors in Quasar naming standard
@@ -330,7 +330,7 @@ $borderWidthBase: 0.06rem;
 
 @each $colorName, $color in $colors {
   .q-border-#{$colorName} {
-    border-color: $color;
+    border-color: $color !important;
     border-width: 1px;
     border-style: solid;
   }
@@ -343,7 +343,7 @@ $borderWidthBase: 0.06rem;
 
   @for $i from 0 to 11 {
     .q-border-#{$colorName}-alpha-#{$i} {
-      border-color: rgba($color, $i * 0.1);
+      border-color: rgba($color, $i * 0.1) !important;
     }
     .bg-#{$colorName}-alpha-#{$i} {
       background-color: rgba($color, $i * 0.1);
