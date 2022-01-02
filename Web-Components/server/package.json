@@ -1,0 +1,12 @@
+{
+  "name": "web-component-server",
+  "version": "1.0.0",
+  "description": "server to host web components for local testing purpose",
+  "main": "index.js",
+  "author": "zq",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  }
+}
