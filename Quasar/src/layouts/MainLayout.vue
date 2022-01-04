@@ -29,7 +29,8 @@
       <ListNavigation />
     </q-drawer>
 
-    <q-page-container>
+    <!-- Max width of individual page been set here -->
+    <q-page-container style="max-width: 1200px" class="q-mx-auto">
       <router-view />
     </q-page-container>
   </q-layout>

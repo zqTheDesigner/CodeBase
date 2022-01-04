@@ -12,8 +12,9 @@
       />
     </div>
 
-    <Column4
+    <Columns
       num-blocks="8"
+      num-columns="3"
       content-class="q-mb-xl q-pb-xl q-horizontal-divider"
     >
       <!-- This syntax #1 is equals to v-slot="1" attribute -->
@@ -23,7 +24,7 @@
           <p><b>Borders</b></p>
           <p>
             Use
-            <code class="bg-grey-2 q-px-xs">q-border-{size variable} </code>
+            <code>q-border-{size variable} </code>
             for different thickness of borders. Border thickness ratio is
             following fibonacci sequence.
           </p>
@@ -47,9 +48,9 @@
           <p><b>Border Radius</b></p>
           <p>
             Use
-            <code class="bg-grey-2 q-px-xs">q-border-round-{1 to 99} </code>
+            <code>q-border-round-{1 to 99} </code>
             for different border radius. Can use together with
-            <code class="bg-grey-2 q-px-xs">q-border-{size variable}</code>
+            <code>q-border-{size variable}</code>
           </p>
         </div>
 
@@ -71,10 +72,10 @@
           <p><b>Border Colors</b></p>
           <p>
             Use
-            <code class="bg-grey-2 q-px-xs">q-border-{color variable} </code>
+            <code>q-border-{color variable} </code>
             for different border colors, include Sentient.io colors and all
             quasar colors. Can use together with
-            <code class="bg-grey-2 q-px-xs">q-border-{size variable}</code>
+            <code>q-border-{size variable}</code>
           </p>
         </div>
         <div class="q-gutter-xs">
@@ -95,11 +96,9 @@
           <p><b>Border Color Opacity</b></p>
           <p>
             Use
-            <code class="bg-grey-2 q-px-xs"
-              >q-border-{color variable}-alpha-{1 - 10}
-            </code>
+            <code>q-border-{color variable}-alpha-{1 - 10} </code>
             for different border color transprancy. Can use together with
-            <code class="bg-grey-2 q-px-xs">q-border-{size variable}</code>
+            <code>q-border-{size variable}</code>
           </p>
         </div>
         <div class="q-gutter-xs bg-amber-alpha-2 q-pa-md">
@@ -120,9 +119,7 @@
           <p><b>Background Color Opacity</b></p>
           <p>
             Use
-            <code class="bg-grey-2 q-px-xs"
-              >q-bg-{color variable}-alpha-{1 - 10}
-            </code>
+            <code>q-bg-{color variable}-alpha-{1 - 10} </code>
             for different background color transprancy.
           </p>
         </div>
@@ -144,9 +141,7 @@
           <p><b>Shadow Color</b></p>
           <p>
             Use
-            <code class="bg-grey-2 q-px-xs"
-              >q-shadow-{size variable}-{color variable}
-            </code>
+            <code>q-shadow-{size variable}-{color variable} </code>
             for different background color transprancy.
           </p>
         </div>
@@ -168,9 +163,7 @@
           <p><b>Text Color Opacity</b></p>
           <p>
             Use
-            <code class="bg-grey-2 q-px-xs"
-              >text-{color variable}-alpha-{1 - 10}
-            </code>
+            <code>text-{color variable}-alpha-{1 - 10} </code>
             for different text color color transprancy.
           </p>
         </div>
@@ -191,13 +184,11 @@
           <p><b>Dividers</b></p>
           <p>
             Use
-            <code class="bg-grey-2 q-px-xs"
-              >q-{horizontal / vertical}-divider
-            </code>
+            <code>q-{horizontal / vertical}-divider </code>
             for vertical / horizontal dividers. Use
-            <code class="bg-grey-2 q-px-xs">q-border-{width variable}</code> and
-            <code class="bg-grey-2 q-px-xs">q-border-{color variable}</code> for
-            differnt divider thickness and color
+            <code>q-border-{width variable}</code> and
+            <code>q-border-{color variable}</code> for differnt divider
+            thickness and color
           </p>
         </div>
         <div class="q-gutter-xs">
@@ -217,19 +208,109 @@
           </div>
         </div>
       </template>
-    </Column4>
+    </Columns>
+
+    <p>
+      <b>
+        Below are some additional classes can use together with Quasar
+        components:
+      </b>
+    </p>
+
+    <ul>
+      <li>
+        <code>.no-underline</code>
+        <p>
+          Will remove the underline for
+          <router-link to="#" class="no-underline"
+            >&lt;router-link&gt;</router-link
+          >
+          or <a href="#" class="no-underline">&lt;a&gt;</a> element.
+        </p>
+      </li>
+
+      <li>
+        <code>.underline</code>
+        <p>
+          Add customised underline to <i class="underline">specific element</i>.
+          <code>.underline</code> is essentially
+          <code>.q-horizontal-divider</code> so you can use any border related
+          class to control the
+          <b class="underline q-border-red">color</b> (<code
+            >class="underline q-border-red"</code
+          >)and the <b class="underline q-border-lg">thickness</b> (<code
+            >class="underline q-border-lg"</code
+          >)
+        </p>
+      </li>
+
+      <li>
+        <code>.q-pa-ma-none</code>
+        <p>Will simply remove both border and margin for an element</p>
+      </li>
+
+      <li>
+        <code>.q-no-dropdown-arrow</code>
+        <p>
+          For some rare case, you can use this class to remove the dropdown
+          arrow for &lt;q-btn-dropdown&gt; element.
+        </p>
+        <q-btn-dropdown no-caps label="Click Me">
+          <div class="q-mx-md">
+            <h3>👻 Boo!</h3>
+            <p>There is a dropdown arrow!</p>
+          </div>
+        </q-btn-dropdown>
+
+        <q-btn-dropdown no-caps label="Click Me" dropdown-icon=" ">
+          <div class="q-mx-md" style="width: 320px">
+            <h3>👻 Boo!</h3>
+            <p>
+              You can also use <code>dropdown-icon=" "</code> attribute to
+              remove the triangle, but look at the blank space, the container is
+              still there!
+            </p>
+          </div>
+        </q-btn-dropdown>
+
+        <q-btn-dropdown no-caps label="Click Me" class="q-no-dropdown-arrow">
+          <div class="q-mx-md" style="width: 320px">
+            <h3>👻 Boo!</h3>
+            <p>
+              Not only the triangle arrow been removed, the empty space is also
+              gone
+            </p>
+          </div>
+        </q-btn-dropdown>
+
+        <q-expansion-item
+          class="q-my-sm q-border-xs q-no-dropdown-arrow"
+          label="Click Me"
+        >
+          <div class="q-mx-md">
+            <h3>👻 Boo!</h3>
+            <p>
+              Same class also can be used on &lt;q-expansion-item&gt; to remove
+              the drop down arrow
+            </p>
+          </div>
+        </q-expansion-item>
+      </li>
+    </ul>
+
+    <div style="height: 200px"></div>
   </q-page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Column4 from 'src/components/containers/Column4.vue';
+import Columns from 'src/containers/Columns.vue';
 import FileDownloader from 'src/components/FileDownloader.vue';
 
 export default defineComponent({
   name: '',
   props: { description: { type: String } },
-  components: { Column4, FileDownloader },
+  components: { Columns, FileDownloader },
   setup() {
     const fakeV = 'some fake data';
     const sizes = ['xs', 'sm', 'md', 'lg', 'xl'];
@@ -257,11 +338,16 @@ export default defineComponent({
   }
 
   @media screen and (min-width: 1439px) {
-    height: 150px;
+    height: 170px;
   }
 
   @media screen and(min-width: 1919px) {
-    height: 140px;
+    height: 170px;
   }
+}
+
+code {
+  background: $grey-2;
+  padding: 0 4px;
 }
 </style>

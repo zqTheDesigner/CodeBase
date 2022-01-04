@@ -9,7 +9,7 @@
 <script>
 import { defineComponent } from 'vue';
 
-import Column4 from 'src/components/containers/Column4.vue';
+import Column4 from 'src/containers/Column4.vue';
 
 export default defineComponent({
   props: { description: { type: String } },

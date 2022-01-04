@@ -1,10 +1,25 @@
 <template>
   <div :class="`bg-grey-${nestLevel + 2}`">
     <q-expansion-item
-      :to="parentPath + '/' + (item.pathName ? item.pathName : item.title)"
-      :label="'&nbsp;&nbsp;'.repeat(nestLevel) + item.title"
+      :label="'&nbsp;'.repeat(nestLevel * 2) + item.title"
       :expand-icon-class="item.children ? '' : 'hidden'"
     >
+      <template #header>
+        <div class="full-width column justify-center">
+          <!-- Render normal text if there is no path -->
+          <p class="q-pa-ma-none" v-if="!item.pathName">
+            {{ '&nbsp;'.repeat(nestLevel * 2) + item.title }}
+          </p>
+          <!-- Render link if there is path -->
+          <router-link
+            class="q-no-decoration text-grey-10 no-underline"
+            v-else
+            :to="parentPath + '/' + item.pathName"
+          >
+            {{ '&nbsp;'.repeat(nestLevel * 2) + item.title }}
+          </router-link>
+        </div>
+      </template>
       <div v-if="item.children">
         <!-- 
 					Recustive Components will be invoked 

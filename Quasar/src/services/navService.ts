@@ -2,6 +2,7 @@
 
 interface navInterface {
   title: string;
+  // For category grouping, don't need pathName
   pathName?: string;
   page: string;
   description?: string;
@@ -69,9 +70,23 @@ const nav = [
   // },
   {
     title: 'Data Visualisation',
-    pathName: 'data_viz',
-    page: 'DataViz.vue',
-    description: 'Page for google charts data visualisation components',
+    description: '',
+    pathName:'data_viz',
+    page:'',
+    children: [
+      {
+        title: 'Google Charts',
+        pathName: 'g_charts',
+        page: 'DataViz.vue',
+        description: 'Page for google charts data visualisation components',
+      },
+      {
+        title: 'Charts.js',
+        pathName: 'chart_js',
+        page: 'data-viz/DataViz_ChartJs.vue',
+        description: 'Page for google charts data visualisation components',
+      },
+    ],
   },
   {
     title: 'Extended Style',
