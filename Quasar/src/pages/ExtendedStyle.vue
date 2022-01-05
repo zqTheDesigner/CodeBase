@@ -13,6 +13,17 @@
         class="q-mx-sm"
         url="https://raw.githubusercontent.com/zqTheDesigner/CodeBase/main/Quasar/src/css/q-extended-style.scss"
       />
+
+      <div
+        class="bg-green-alpha-2 q-border-round-8 q-ma-lg q-pa-lg q-border-x q-border-md q-border-green"
+      >
+        In case your project is not auto compiling scss. You can use
+        <a href="https://beautifytools.com/scss-compiler.php" target="_blank"
+          >this online scss compilier</a
+        >to convert it to css. All you need to do is download the .scss file and
+        copy everything to the compilier. All the syntax below will still works
+        in css file.
+      </div>
     </div>
 
     <Columns
@@ -224,11 +235,11 @@
             <code>q-border-{color variable}</code>.
           </p>
         </div>
-        <div class="q-gutter-md">
+        <div class="row q-gutter-sm">
           <div
             v-for="(v, i) in additionalBorderVar"
             :key="i"
-            :class="`q-border-${v} q-border-${colors[i]} q-border-md`"
+            :class="`bg-grey-2 col-5 q-border-${v} q-border-${colors[i]} q-border-md`"
           >
             {{ `q-border-${v} q-border-${colors[i]} q-border-md` }}
           </div>
@@ -358,8 +369,12 @@ export default defineComponent({
       'D',
       'U',
       'N',
-      'X',
-      'Y',
+      'x',
+      'y',
+      'l',
+      'r',
+      't',
+      'b',
     ];
     return { sizes, colors, fakeV, additionalBorderVar };
   },

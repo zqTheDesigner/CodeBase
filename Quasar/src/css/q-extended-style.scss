@@ -434,7 +434,33 @@ $borderWidthBase: 0.06rem;
   border-top: 0 !important;
   border-bottom: 0 !important;
 }
+.q-border-x {
+  @extend .q-border-X;
+}
 .q-border-Y {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+.q-border-y {
+  @extend .q-border-Y;
+}
+.q-border-l {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-right: 0 !important;
+}
+.q-border-r {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-left: 0 !important;
+}
+.q-border-t {
+  border-bottom: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+.q-border-b {
+  border-top: 0 !important;
   border-left: 0 !important;
   border-right: 0 !important;
 }
