@@ -1,11 +1,14 @@
 <template>
   <q-page class="q-pa-lg">
     <h3 class="q-mx-none">Extended Style</h3>
+    <div class="q-mb-lg">
+      <i>Last update: 2022 Jan 06</i>
+    </div>
+
     <div v-html="description" class="q-mb-lg" />
 
     <div class="row items-center q-mb-md">
       <p class="q-pa-ma-none">Download q-extended-style.scss</p>
-
       <FileDownloader
         class="q-mx-sm"
         url="https://raw.githubusercontent.com/zqTheDesigner/CodeBase/main/Quasar/src/css/q-extended-style.scss"
@@ -13,7 +16,7 @@
     </div>
 
     <Columns
-      num-blocks="8"
+      num-blocks="9"
       num-columns="3"
       content-class="q-mb-xl q-pb-xl q-horizontal-divider"
     >
@@ -208,6 +211,29 @@
           </div>
         </div>
       </template>
+
+      <template #9>
+        <!-- Additional border classes -->
+        <div class="scoped-style-description">
+          <p><b>Additional border classes</b></p>
+          <p>
+            Use
+            <code>q-border-{ {{ additionalBorderVar }} } </code>
+            for special border appearance. Must use width
+            <code>q-border-{width variable}</code> and
+            <code>q-border-{color variable}</code>.
+          </p>
+        </div>
+        <div class="q-gutter-md">
+          <div
+            v-for="(v, i) in additionalBorderVar"
+            :key="i"
+            :class="`q-border-${v} q-border-${colors[i]} q-border-md`"
+          >
+            {{ `q-border-${v} q-border-${colors[i]} q-border-md` }}
+          </div>
+        </div>
+      </template>
     </Columns>
 
     <p>
@@ -253,7 +279,8 @@
         <code>.q-no-dropdown-arrow</code>
         <p>
           For some rare case, you can use this class to remove the dropdown
-          arrow for &lt;q-btn-dropdown&gt; element.
+          arrow <q-icon name="arrow_drop_down" /> for &lt;q-btn-dropdown&gt;
+          element.
         </p>
         <q-btn-dropdown no-caps label="Click Me">
           <div class="q-mx-md">
@@ -322,7 +349,19 @@ export default defineComponent({
       'amber',
       'cyan',
     ];
-    return { sizes, colors, fakeV };
+    const additionalBorderVar = [
+      'T',
+      '7',
+      'L',
+      'J',
+      'C',
+      'D',
+      'U',
+      'N',
+      'X',
+      'Y',
+    ];
+    return { sizes, colors, fakeV, additionalBorderVar };
   },
 });
 </script>

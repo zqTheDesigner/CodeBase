@@ -1,5 +1,9 @@
+// Last update: 2022 Jan 06
+
 // Import this file from app.scss with
 // @import './q-extended-style.scss';
+
+// How To Use : https://zqthedesigner.github.io/CodeBase/Quasar/dist/spa/#/extended_style
 
 // Material Design Colors
 // This list contains all material design colors in Quasar naming standard
@@ -395,6 +399,47 @@ $borderWidthBase: 0.06rem;
   border-bottom-style: solid;
 }
 
+// Additional border classes
+.q-border-T {
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.q-border-7 {
+  border-left: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.q-border-L {
+  border-right: 0 !important;
+  border-top: 0 !important;
+}
+.q-border-J {
+  border-left: 0 !important;
+  border-top: 0 !important;
+}
+.q-border-C {
+  border-right: 0 !important;
+}
+.q-border-D {
+  border-left: 0 !important;
+}
+.q-border-U {
+  border-top: 0 !important;
+}
+.q-border-N {
+  border-bottom: 0 !important;
+}
+.q-border-X {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+.q-border-Y {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+// Additional classes for Quasar components
 .q-pa-ma-none {
   padding: 0 !important;
   margin: 0 !important;
