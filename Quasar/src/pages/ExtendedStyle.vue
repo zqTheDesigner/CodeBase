@@ -15,7 +15,7 @@
       />
 
       <div
-        class="bg-green-alpha-2 q-border-round-8 q-ma-lg q-pa-lg q-border-x q-border-md q-border-green"
+        class="q-ma-lg q-pa-lg bg-green-alpha-2 q-border-round-8 q-border-x q-border-md q-border-green"
       >
         In case your project is not auto compiling scss. You can use
         <a href="https://beautifytools.com/scss-compiler.php" target="_blank"
@@ -239,9 +239,19 @@
           <div
             v-for="(v, i) in additionalBorderVar"
             :key="i"
-            :class="`bg-grey-2 col-5 q-border-${v} q-border-${colors[i]} q-border-md`"
+            :class="`bg-grey-2 col-5 q-border-${v} q-border-${
+              colors[i] ? colors[i] : colors[i - 6] ? colors[i - 6] : colors[4]
+            } q-border-md`"
           >
-            {{ `q-border-${v} q-border-${colors[i]} q-border-md` }}
+            {{
+              `q-border-${v} q-border-${
+                colors[i]
+                  ? colors[i]
+                  : colors[i - 6]
+                  ? colors[i - 6]
+                  : colors[4]
+              } q-border-md`
+            }}
           </div>
         </div>
       </template>
@@ -254,7 +264,7 @@
       </b>
     </p>
 
-    <ul>
+    <ul class="column q-gutter-lg">
       <li>
         <code>.no-underline</code>
         <p>
@@ -264,6 +274,11 @@
           >
           or <a href="#" class="no-underline">&lt;a&gt;</a> element.
         </p>
+        <b>HTML Example: </b
+        ><code>
+          &lt;router-link to="#" class="no-underline"&gt; router-link
+          &lt;/router-link&gt;</code
+        >
       </li>
 
       <li>
@@ -279,11 +294,13 @@
             >class="underline q-border-lg"</code
           >)
         </p>
+        <b>HTML Example: </b
+        ><code> &lt;i class="underline"&gt;specific element&lt;/i&gt;</code>
       </li>
 
       <li>
         <code>.q-pa-ma-none</code>
-        <p>Will simply remove both border and margin for an element</p>
+        <p>Will simply remove both padding and margin for an element</p>
       </li>
 
       <li>
@@ -320,6 +337,12 @@
             </p>
           </div>
         </q-btn-dropdown>
+        <br />
+        <b>HTML Example: </b
+        ><code>
+          &lt;q-btn-dropdown class="q-no-dropdown-arrow"&gt; Some Content
+          &lt;/q-btn-dropdown&gt;</code
+        >
 
         <q-expansion-item
           class="q-my-sm q-border-xs q-no-dropdown-arrow"
@@ -333,6 +356,11 @@
             </p>
           </div>
         </q-expansion-item>
+        <b>HTML Example: </b
+        ><code>
+          &lt;q-expansion-item class="q-no-dropdown-arrow"&gt; Some Content
+          &lt;/q-expansion-item&gt;</code
+        >
       </li>
     </ul>
 
