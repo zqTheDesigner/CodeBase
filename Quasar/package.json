@@ -2,7 +2,7 @@
   "name": "quasar",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "quasar app",
+  "productName": "Quasar Code Base",
   "author": "",
   "private": true,
   "scripts": {
@@ -17,6 +17,7 @@
     "axios": "^0.21.1",
     "chart.js": "^3.7.0",
     "core-js": "^3.6.5",
+    "csvjson": "^5.1.0",
     "quasar": "^2.0.0",
     "vue-google-charts": "^0.3.3",
     "vue-i18n": "^9.0.0",

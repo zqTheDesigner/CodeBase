@@ -2598,6 +2598,11 @@ csstype@^2.6.8:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.19.tgz#feeb5aae89020bb389e1f63669a5ed490e391caa"
   integrity sha512-ZVxXaNy28/k3kJg0Fou5MiYpp88j7H9hLZp8PDC3jV0WFjfH5E9xHb56L0W59cPbKbcHXeP4qyT8PrHp8t6LcQ==
 
+csvjson@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/csvjson/-/csvjson-5.1.0.tgz#f055660824ebfb44dc089d901267fdc5d9e8414a"
+  integrity sha512-OqALQHA0k2rEGluOWikwFq5qtkRUDyoWP2u0UJy8uFjFx5FPMjPzx7D2Hn2KjBLpc8jkGrT9HDNgTUfopDlqVg==
+
 debounce@^1.1.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.1.tgz#38881d8f4166a5c5848020c11827b834bcb3e0a5"

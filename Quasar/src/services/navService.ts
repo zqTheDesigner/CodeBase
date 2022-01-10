@@ -71,8 +71,8 @@ const nav = [
   {
     title: 'Data Visualisation',
     description: '',
-    pathName:'data_viz',
-    page:'',
+    pathName: 'data_viz',
+    page: '',
     children: [
       {
         title: 'Google Charts',
@@ -90,10 +90,24 @@ const nav = [
   },
   {
     title: 'Extended Style',
-    pathName: 'extended_style',
-    page: 'ExtendedStyle.vue',
-    description:
-      'Extended css style for Quasar framework, access these styles by copy and embed <code class="bg-grey-2 q-px-sm">q-extended-style.scss</code> to <code class="bg-grey-2 q-px-sm">app.scss</code>. Take note, comment not used color variables as much as possible, else the css file size will be HUGE',
+    pathName: '',
+    page: '',
+    children: [
+      {
+        title: 'Extended Style',
+        pathName: 'extended_style',
+        page: 'ExtendedStyle.vue',
+        description:
+          'Extended css style for Quasar framework, access these styles by copy and embed <code class="bg-grey-2 q-px-sm">q-extended-style.scss</code> to <code class="bg-grey-2 q-px-sm">app.scss</code>. Take note, comment not used color variables as much as possible, else the css file size will be HUGE',
+      },
+      {
+        title: 'Typography',
+        pathName: 'Typography',
+        page: 'Typography.vue',
+        description:
+          'Extended css typography style. Font loaded from google fonts. ',
+      },
+    ],
   },
   {
     title: 'Backgrounds',

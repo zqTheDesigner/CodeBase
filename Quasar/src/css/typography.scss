@@ -1,0 +1,56 @@
+// Last update: 2022 Jan 06
+
+// Import this file from app.scss with
+// @import './typography.scss';
+
+$bodyFont: 'Roboto'; // Mandatory
+$headerFont: 'Zilla Slab'; // Optional
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+@mixin loadGoogleFont($family) {
+  // This will automatically replace space to + Google font is using + sign to replace space
+  @import url('https://fonts.googleapis.com/css2?family=' + str-replace(
+      $family,
+      ' ',
+      '+'
+    ) + ':wght@100;200;300;400;500;600;700;800;900&display=swap');
+}
+
+@include loadGoogleFont($bodyFont);
+
+@if ($headerFont != '') {
+  @include loadGoogleFont($headerFont);
+  @for $i from 1 to 4 {
+    h#{$i} {
+      font-family: $headerFont;
+      font-weight: 900 - $i * 100 + 100;
+    }
+  }
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: $bodyFont;
+}
+
+@for $i from 1 to 10 {
+  .font-weight-#{$i*100} {
+    font-weight: $i * 100;
+  }
+}

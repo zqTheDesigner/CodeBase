@@ -1,24 +1,28 @@
 <template>
-  <div class="row items-center justify-center q-pa-lg" style="height: 100vh">
-    <div style="max-width: 600px">
-      <div class="row no-wrap">
+  <div class="row items-center justify-center" style="height: 100vh">
+    <div style="max-width: 800px">
+      <h2 class="text-center q-pb-xl text-weight-xl">Code Snippets for Quasar</h2>
+
+      <div class="row items-center no-wrap">
         <div>
-          <h2>Hello!</h2>
           <p>
-            Here is a Quasar code base, you may find some useful quasar code
-            snippets or download some templates here.
+            A Quasar code base, you may find some useful quasar code snippets or
+            download some templates here.
+          </p>
+          <p>
+            All source code can be found from
+            <a
+              href="https://github.com/zqTheDesigner/CodeBase.git "
+              target="_blank"
+              >This Repository</a
+            >
           </p>
         </div>
 
-        <q-img src="man-standing-hello.png" width="300px" />
+        <q-img src="man-standing-hello.png" width="220px" />
       </div>
 
-      <div class="full-width q-mt-xl">
-        All source code can be found from
-        <a href="https://github.com/zqTheDesigner/CodeBase.git " target="_blank"
-          >This Repository</a
-        >
-      </div>
+      <div class="full-width q-mt-xl"></div>
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header class="bg-white text-black q-border-b q-border-black">
       <q-toolbar>
         <q-btn
           flat
@@ -20,7 +20,9 @@
 
         <q-toolbar-title class="full-width text-center">
           <q-icon name="home" />
-          <router-link to="/" class="text-white"> Quasar Code Base</router-link>
+          <router-link to="/" class="no-underline text-black">
+            Quasar Code Base</router-link
+          >
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
