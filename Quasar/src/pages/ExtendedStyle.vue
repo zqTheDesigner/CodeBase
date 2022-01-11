@@ -428,8 +428,5 @@ export default defineComponent({
   }
 }
 
-code {
-  background: $grey-2;
-  padding: 0 4px;
-}
+
 </style>

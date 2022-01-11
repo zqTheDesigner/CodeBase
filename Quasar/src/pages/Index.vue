@@ -1,7 +1,7 @@
 <template>
   <div class="row items-center justify-center" style="height: 100vh">
     <div style="max-width: 800px">
-      <h2 class="text-center q-pb-xl text-weight-xl">Code Snippets for Quasar</h2>
+      <h2 class="text-center q-pb-xl font-weight-900">Code Snippets for Quasar</h2>
 
       <div class="row items-center no-wrap">
         <div>

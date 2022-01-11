@@ -28,7 +28,7 @@ export default defineComponent({
     async function downloadFile() {
       const file = await axios.get(props.url);
       console.log(file);
-      exportFile('q-extended-style.scss', file.data);
+      exportFile(fileName.value, file.data);
     }
 
     return { downloadFile };

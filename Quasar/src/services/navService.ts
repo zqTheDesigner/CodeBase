@@ -90,7 +90,7 @@ const nav = [
   },
   {
     title: 'Extended Style',
-    pathName: '',
+    pathName: 'extended_style',
     page: '',
     children: [
       {
@@ -102,7 +102,7 @@ const nav = [
       },
       {
         title: 'Typography',
-        pathName: 'Typography',
+        pathName: 'typography',
         page: 'Typography.vue',
         description:
           'Extended css typography style. Font loaded from google fonts. ',
