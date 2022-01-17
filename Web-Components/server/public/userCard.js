@@ -15,6 +15,12 @@ template.innerHTML = `
 			<p><slot name='phone' /></p>
 		</div>
 
+        <form>
+            <label for='data'>Data</label><br>
+            <input type='text' id='data' name='data'><br>
+            <input type='submit' value='Submit' id='submitData'>
+        </form>
+
 		<button id='toggleInfo'>Hide Info</button>
 
 	</div>
@@ -26,9 +32,7 @@ template.innerHTML = `
 class UserCard extends HTMLElement {
     constructor() {
         super()
-
         this.showInfo = true
-
         this.attachShadow({ mode: 'open' })
 
         this.shadowRoot.appendChild(template.content.cloneNode(true))
@@ -56,16 +60,29 @@ class UserCard extends HTMLElement {
         }
     }
 
+    submitData() {
+        const data = this.shadowRoot.querySelector('#data')
+        console.log(data.value)
+    }
+
     connectedCallback() {
         this.shadowRoot
             .querySelector('#toggleInfo')
             .addEventListener('click', () => {
                 this.toggleInfo()
             })
+
+        this.shadowRoot
+            .querySelector('#submitData')
+            .addEventListener('click', (event) => {
+                event.preventDefault()
+                this.submitData()
+            })
     }
 
     disconnectedCallback() {
         this.shadowRoot.querySelector('#toggleInfo').removeEventListener()
+        this.shadowRoot.querySelector('#submitData').removeEventListener()
     }
 }
 

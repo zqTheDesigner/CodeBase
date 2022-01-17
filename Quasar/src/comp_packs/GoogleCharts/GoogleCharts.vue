@@ -1,15 +1,30 @@
 <template>
   <div>
-    <google-chart
-      data='[["Month", "Days"], ["Jan", 31],["Feb", 12]]'
-      type="line"
-      :options="{ title: 'Distribution of days in 2001Q1' }"
-    ></google-chart>
+    <div class="row">
+      <div v-for="type in chartTypes" :key="type" class="q-ma-sm">
+        <google-chart
+          :type="type"
+          :options="{ title: 'Distribution of days in 2001Q1' }"
+          class="q-border-xs"
+          data='[["Month", "Days"], ["Jan", 31],["Feb", 12]]'
+        />
+        <b>Type: {{ type }}</b>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { defineComponent } from 'vue';
+import { gChartsService } from './gChartsService';
+
+const { chartTypes } = gChartsService();
+
+export default defineComponent({
+  setup() {
+    return { chartTypes };
+  },
+});
 </script>
 
 <style lang="scss" scoped></style>
