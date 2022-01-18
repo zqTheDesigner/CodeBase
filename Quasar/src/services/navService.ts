@@ -77,7 +77,7 @@ const nav = [
       {
         title: 'Google Charts',
         pathName: 'g_charts',
-        page: 'DataViz.vue',
+        page: 'data-viz/DataViz_GCharts.vue',
         description: 'Page for google charts data visualisation components',
       },
       {

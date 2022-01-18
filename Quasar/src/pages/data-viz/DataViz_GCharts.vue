@@ -1,5 +1,5 @@
 <template>
-  <q-page class="items-center justify-evenly">
+  <q-page class="q-py-lg">
     <!-- <h1>Data Viz</h1> -->
     <GoogleCharts />
   </q-page>
