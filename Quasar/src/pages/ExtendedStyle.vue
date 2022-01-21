@@ -2,7 +2,7 @@
   <q-page class="q-pa-lg">
     <h3 class="q-mx-none">Extended Style</h3>
     <div class="q-mb-lg">
-      <i>Last update: 2022 Jan 06</i>
+      <i>Last update: 2022 Jan 21</i>
     </div>
 
     <div v-html="description" class="q-mb-lg" />
@@ -14,8 +14,14 @@
         url="https://raw.githubusercontent.com/zqTheDesigner/CodeBase/main/Quasar/src/css/q-extended-style.scss"
       />
 
+      <a
+        href="https://raw.githubusercontent.com/zqTheDesigner/CodeBase/main/Quasar/src/css/q-extended-style.scss"
+        target="_blank"
+        >Open file in new tab</a
+      >
+
       <div
-        class="q-ma-lg q-pa-lg bg-green-alpha-2 q-border-round-8 q-border-x q-border-md q-border-green"
+        class="q-ma-lg q-pa-lg bg-green-opacity-low q-border-round-8 q-border-x q-border-md q-border-green"
       >
         In case your project is not auto compiling scss. You can use
         <a href="https://beautifytools.com/scss-compiler.php" target="_blank"
@@ -62,7 +68,7 @@
           <p><b>Border Radius</b></p>
           <p>
             Use
-            <code>q-border-round-{1 to 99} </code>
+            <code>q-border-round-{4, 8, 16 till 60} </code>
             for different border radius. Can use together with
             <code>q-border-{size variable}</code>
           </p>
@@ -70,12 +76,12 @@
 
         <div class="q-gutter-xs">
           <div
-            v-for="i in 6"
+            v-for="i in 5"
             :key="i"
-            :class="`q-border-round-${i * 3} q-border-sm `"
+            :class="`q-border-round-${i * 4} q-border-sm `"
             class="q-pa-xs"
           >
-            q-border-round-{{ i * 2 }}
+            q-border-round-{{ i * 4 }}
           </div>
         </div>
       </template>
@@ -110,19 +116,21 @@
           <p><b>Border Color Opacity</b></p>
           <p>
             Use
-            <code>q-border-{color variable}-alpha-{1 - 10} </code>
+            <code
+              >q-border-{color variable}-opacity-{'low', 'medium', 'high'}
+            </code>
             for different border color transprancy. Can use together with
             <code>q-border-{size variable}</code>
           </p>
         </div>
         <div class="q-gutter-xs bg-amber-alpha-2 q-pa-md">
           <div
-            v-for="i in 5"
+            v-for="i in opacityLevels"
             :key="i"
-            :class="`q-border-sentient-purple-alpha-${i * 2} q-border-lg`"
+            :class="`q-border-sentient-purple-opacity-${i} q-border-lg`"
             class="q-pa-xs"
           >
-            q-border-sentient-purple-alpha-{{ i * 2 }}
+            q-border-sentient-purple-alpha-{{ i }}
           </div>
         </div>
       </template>
@@ -133,18 +141,20 @@
           <p><b>Background Color Opacity</b></p>
           <p>
             Use
-            <code>q-bg-{color variable}-alpha-{1 - 10} </code>
+            <code
+              >q-bg-{color variable}-opacity-{'low', 'medium', 'high'}
+            </code>
             for different background color transprancy.
           </p>
         </div>
         <div class="q-gutter-xs bg-amber-alpha-2 q-pa-md">
           <div
-            v-for="i in 5"
+            v-for="i in opacityLevels"
             :key="i"
-            :class="`bg-sentient-purple-alpha-${i * 2}`"
+            :class="`bg-sentient-purple-opacity-${i}`"
             class="q-pa-xs"
           >
-            bg-sentient-purple-alpha-{{ i * 2 }}
+            bg-sentient-purple-opacity-{{ i }}
           </div>
         </div>
       </template>
@@ -177,18 +187,20 @@
           <p><b>Text Color Opacity</b></p>
           <p>
             Use
-            <code>text-{color variable}-alpha-{1 - 10} </code>
+            <code
+              >text-{color variable}-opacity-{'low', 'medium', 'high'}
+            </code>
             for different text color color transprancy.
           </p>
         </div>
         <div class="q-gutter-xs q-pr-sm q-pt-xs q-pb-sm">
           <div
-            v-for="i in 5"
+            v-for="i in opacityLevels"
             :key="i"
-            :class="`text-sentient-purple-alpha-${i * 2}`"
+            :class="`text-sentient-purple-opacity-${i}`"
             class="bg-grey-4 q-pa-xs"
           >
-            {{ `text-sentient-purple-alpha-${i * 2}` }}
+            {{ `text-sentient-purple-opacity-${i}` }}
           </div>
         </div>
       </template>
@@ -404,7 +416,8 @@ export default defineComponent({
       't',
       'b',
     ];
-    return { sizes, colors, fakeV, additionalBorderVar };
+    const opacityLevels = ['low', 'medium', 'high'];
+    return { sizes, colors, fakeV, additionalBorderVar, opacityLevels };
   },
 });
 </script>
@@ -427,6 +440,4 @@ export default defineComponent({
     height: 170px;
   }
 }
-
-
 </style>
