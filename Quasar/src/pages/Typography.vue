@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-lg">
+  <q-page>
     <h3 class="q-mx-none">Typography</h3>
     <div class="q-mb-lg">
       <i>Last update: 2022 Jan 06</i>
@@ -43,7 +43,7 @@
     </div>
 
     <div>
-      <Columns num-blocks="1" num-columns="3">
+      <Columns :num-blocks="1" :num-columns="3">
         <template #1>
           <!-- Font Weight -->
           <p><b>Font Weight</b></p>

@@ -7,12 +7,12 @@
       <template #header>
         <div class="full-width column justify-center">
           <!-- Render normal text if there is no path -->
-          <p class="q-pa-ma-none" v-if="!item.pathName">
+          <p class="q-pa-ma-none" v-if="!item.page">
             {{ '&nbsp;'.repeat(nestLevel * 2) + item.title }}
           </p>
           <!-- Render link if there is path -->
           <router-link
-            class="q-no-decoration text-grey-10 no-underline"
+            class="q-no-decoration text-grey-10 no-underline full-width"
             v-else
             :to="parentPath + '/' + item.pathName"
           >

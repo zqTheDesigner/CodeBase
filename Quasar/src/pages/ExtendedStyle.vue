@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-lg">
+  <q-page>
     <h3 class="q-mx-none">Extended Style</h3>
     <div class="q-mb-lg">
       <i>Last update: 2022 Jan 21</i>
@@ -33,8 +33,8 @@
     </div>
 
     <Columns
-      num-blocks="9"
-      num-columns="3"
+      :num-blocks="9"
+      :num-columns="3"
       content-class="q-mb-xl q-pb-xl q-horizontal-divider"
     >
       <!-- This syntax #1 is equals to v-slot="1" attribute -->
@@ -173,10 +173,10 @@
           <div
             v-for="color in colors"
             :key="color"
-            :class="`shadow-sm-${color}`"
+            :class="`shadow-md-${color}`"
             class="q-pa-xs"
           >
-            shadow-sm-${color}
+            shadow-md-{{ color }}
           </div>
         </div>
       </template>

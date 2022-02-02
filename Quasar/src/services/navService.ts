@@ -107,6 +107,13 @@ const nav = [
         description:
           'Extended css typography style. Font loaded from google fonts. ',
       },
+      {
+        title: 'Elevation (Shadow)',
+        pathName: 'elevation',
+        page: 'extended-style/Elevation.vue',
+        description:
+          'Extended css typography style. Font loaded from google fonts. ',
+      },
     ],
   },
   {
@@ -167,7 +174,10 @@ const generateRoutes = (n: navInterface[]) => {
       navItems.push({
         path,
         component: () => import(`pages/${navItem.page}`),
-        props: { description: navItem.description },
+        props: {
+          description: navItem.description,
+          detail: { title: navItem.title, description: navItem.description },
+        },
       });
     });
 

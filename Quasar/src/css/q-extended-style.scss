@@ -132,7 +132,7 @@ $colors: (
   // 'light-blue-13': #00b0ff,
   // 'light-blue-14': #0091ea,
   //
-  // 'cyan': #00bcd4,
+  'cyan': #00bcd4,
   // 'cyan-1': #e0f7fa,
   // 'cyan-2': #b2ebf2,
   // 'cyan-3': #80deea,
@@ -370,7 +370,25 @@ $borderWidthBase: 0.06rem;
 
   @each $sizeName, $size in $sizeMap {
     .shadow-#{$sizeName}-#{$colorName} {
-      box-shadow: 0 2px * $size 4px * $size $color;
+      // box-shadow: 0 2px * $size 4px * $size $color;
+      box-shadow: 0px
+          1px *
+          $size
+          1.5px *
+          $size -1px *
+          $size
+          rgba($color, 0.15 * $size),
+        0px 1px * $size 2px * $size 0px rgba($color, 0.05 * $size),
+        0px 1px * $size 3px * $size 0px rgba($color, 0.05 * $size);
+      -webkit-box-shadow: 0px
+          1px *
+          $size
+          1.5px *
+          $size -1px *
+          $size
+          rgba($color, 0.15 * $size),
+        0px 1px * $size 2px * $size 0px rgba($color, 0.05 * $size),
+        0px 1px * $size 3px * $size 0px rgba($color, 0.05 * $size);
     }
   }
 
