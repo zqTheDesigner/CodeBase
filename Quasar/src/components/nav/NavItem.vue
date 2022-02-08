@@ -7,14 +7,14 @@
       <template #header>
         <div class="full-width column justify-center">
           <!-- Render normal text if there is no path -->
-          <p class="q-pa-ma-none" v-if="!item.page">
+          <p class="q-pa-ma-none" v-if="!item.path">
             {{ '&nbsp;'.repeat(nestLevel * 2) + item.title }}
           </p>
           <!-- Render link if there is path -->
           <router-link
             class="q-no-decoration text-grey-10 no-underline full-width"
             v-else
-            :to="parentPath + '/' + item.pathName"
+            :to="item.path"
           >
             {{ '&nbsp;'.repeat(nestLevel * 2) + item.title }}
           </router-link>
@@ -26,8 +26,8 @@
 					if there is child item nested inside 
 					-->
         <nav-item
-          v-for="childItem in item.children"
-          :key="childItem.title"
+          v-for="(childItem, index) in item.children"
+          :key="index"
           :item="childItem"
           :nest-level="nestLevel + 1"
           :parent-path="
@@ -48,7 +48,7 @@ const router = useRouter();
 export default defineComponent({
   name: 'NavItem',
   props: {
-    item: {},
+    item: { type: Object, required: true },
 
     /**
      * parentPath will track the path for  parent

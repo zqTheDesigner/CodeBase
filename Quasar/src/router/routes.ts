@@ -1,13 +1,15 @@
 import { RouteRecordRaw } from 'vue-router';
 
-import { navService } from 'src/services/navService';
-const { navRoutes } = navService();
+// import { navService } from 'src/services/navService';
+import { navRoutes } from './navRoutes';
+// const { navRoutes } = navService();
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
+      // ...navRoutes,
       ...navRoutes,
       { path: '', component: () => import('pages/Index.vue') },
     ],

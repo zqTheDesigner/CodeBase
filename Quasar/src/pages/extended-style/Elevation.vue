@@ -15,7 +15,9 @@
     <div class="row">
       <div v-for="i in 24" :key="i">
         <div class="cube text-red-opacity-low" :class="`elevation_${i}`">
-          <p class="q-pa-sm text-black">text-red-opacity-low shadow-{{ i }}</p>
+          <p class="q-pa-sm text-black">
+            text-red-opacity-low elevation_{{ i }}
+          </p>
         </div>
       </div>
     </div>
