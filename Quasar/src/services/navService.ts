@@ -184,12 +184,13 @@ const generateRoutes = (n: navInterface[]) => {
   addNavItems(n);
   return navItems;
 };
+generateRoutes;
+nav;
+// const navService = () => {
+//   return {
+//     nav,
+//     navRoutes: generateRoutes(nav),
+//   };
+// };
 
-const navService = () => {
-  return {
-    nav,
-    navRoutes: generateRoutes(nav),
-  };
-};
-
-export { navService, navInterface };
+// export { navService, navInterface };
