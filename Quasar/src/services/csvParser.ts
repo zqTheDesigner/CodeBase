@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* Need above 2 lines to disable rules for papaparse pacakge */
 import Papa from 'papaparse'; // Parse csv to json
-import { Url } from 'url';
 // Papaparse documentation: https://www.papaparse.com/docs
 
 const csvParser = () => {

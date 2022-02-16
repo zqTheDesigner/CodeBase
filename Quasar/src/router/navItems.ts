@@ -4,6 +4,7 @@
 
 interface NavItemsInterface {
   title: string;
+  name?:string;
   path?: string;
   children?: NavItemsInterface[];
 }
@@ -41,6 +42,16 @@ export const navItems: NavItemsInterface[] = [
   {
     title: 'Google Map',
     path: '/g_map',
+  },
+  {
+    title: 'UI Components',
+    children: [
+      {
+        title: 'Tag Selector',
+        name:'Tag Selector',
+        path: '/ui/tag_selector',
+      },
+    ],
   },
   {
     title: 'Containers',

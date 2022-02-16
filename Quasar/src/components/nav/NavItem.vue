@@ -7,13 +7,23 @@
       <template #header>
         <div class="full-width column justify-center">
           <!-- Render normal text if there is no path -->
-          <p class="q-pa-ma-none" v-if="!item.path">
+          <p v-if="!item.path" class="q-pa-ma-none">
             {{ '&nbsp;'.repeat(nestLevel * 2) + item.title }}
           </p>
+
+          <!-- Render link if there is named path -->
+          <router-link
+            v-else-if="item.name"
+            class="q-no-decoration text-grey-10 no-underline full-width"
+            :to="{ name: item.name }"
+          >
+            {{ '&nbsp;'.repeat(nestLevel * 2) + item.title }}
+          </router-link>
+
           <!-- Render link if there is path -->
           <router-link
-            class="q-no-decoration text-grey-10 no-underline full-width"
             v-else
+            class="q-no-decoration text-grey-10 no-underline full-width"
             :to="item.path"
           >
             {{ '&nbsp;'.repeat(nestLevel * 2) + item.title }}

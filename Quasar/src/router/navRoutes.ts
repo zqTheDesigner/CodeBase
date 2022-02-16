@@ -62,4 +62,10 @@ export const navRoutes: RouteRecordRaw[] = [
     component: () => import('src/pages/CSVParser.vue'),
     props: { detail: pageDetails.csvParser },
   },
+  // Tag Selector
+  {
+    path: 'ui/tag_selector',
+    name: 'Tag Selector',
+    component: () => import('src/pages/ui-components/TagSelectorPage.vue'),
+  },
 ];
