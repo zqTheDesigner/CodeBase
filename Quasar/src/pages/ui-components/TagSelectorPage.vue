@@ -2,12 +2,12 @@
   <div>
     <transition-group appear-active-class="animated zoomIn" appear>
       <!-- Problem: cannot figure out how to let the list item appear one by one without writing customed css or js time interval -->
-      <div key="1">
-        <b>Group A</b>
-        <TagSelector :tags="tagGroups.a" />
+      <div :key="k" v-for="k in ['a', 'b', 'c']">
+        <b>Group {{k}}</b>
+        <TagSelector :tags="tagGroups[k]" />
         <hr />
       </div>
-
+      <!-- 
       <div key="2">
         <b>Group B</b>
         <TagSelector :tags="tagGroups.b" />
@@ -18,7 +18,7 @@
       <div key="3">
         <b>Group C</b>
         <TagSelector :tags="tagGroups.c" />
-      </div>
+      </div> -->
     </transition-group>
   </div>
 </template>
