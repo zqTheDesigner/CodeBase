@@ -1,34 +1,36 @@
 <template>
-  <div class="row items-center" style="height: 600px">
-    <div class="col-6 column justify-between full-height">
-      <q-select
-        hint="Always wait till the chart animation finishend before change the chart type, else it will freeze. When freezed, refresh the browser"
-        v-model="chartType"
-        @update:model-value="
-          () => {
-            updateDefaultData();
-            drawChart();
-          }
-        "
-        :options="Object.keys(chartsDefault)"
-      />
-      <canvas ref="chartJsContainer" />
-    </div>
+  <div>
+    <div class="row items-center" style="height: 600px">
+      <div class="col-6 column justify-between full-height">
+        <q-select
+          hint="Always wait till the chart animation finishend before change the chart type, else it will freeze. When freezed, refresh the browser"
+          v-model="chartType"
+          @update:model-value="
+            () => {
+              updateDefaultData();
+              drawChart();
+            }
+          "
+          :options="Object.keys(chartsDefault)"
+        />
+        <canvas ref="chartJsContainer" style="max-height: 45vh" />
+      </div>
 
-    <div class="col-6">
-      <p>
-        Edited data will NOT be saved, please paste the data somewhere else
-        before change chart type.
-      </p>
-      <pre
-        style="border: 1px solid black; height: 300px; overflow: scroll"
-      ><code style="outline:none" contenteditable="true" @input="evt => updateData(evt)">{{config.data}}</code></pre>
+      <div class="col-6">
+        <p>
+          Edited data will NOT be saved, please paste the data somewhere else
+          before change chart type.
+        </p>
+        <pre
+          style="border: 1px solid black; height: 300px; overflow: scroll"
+        ><code style="outline:none" contenteditable="true" @input="evt => updateData(evt)">{{config.data}}</code></pre>
 
-      <pre
-        style="border: 1px solid black; height: 300px; overflow: scroll"
-      ><code style="outline:none" contenteditable="true" @input="evt => updateOptions(evt)">{{config.options}}</code></pre>
-      <small class="text-red">{{ jsonSyntaxErr }}</small>
-      <q-btn label="Update Chart" @click="drawChart()" />
+        <pre
+          style="border: 1px solid black; height: 300px; overflow: scroll"
+        ><code style="outline:none" contenteditable="true" @input="evt => updateOptions(evt)">{{config.options}}</code></pre>
+        <small class="text-red">{{ jsonSyntaxErr }}</small>
+        <q-btn label="Update Chart" @click="drawChart()" />
+      </div>
     </div>
   </div>
 </template>
