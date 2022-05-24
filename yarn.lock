@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@vue/composition-api@^1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.6.2.tgz#8e65cf60cd919f23649951ed14a67d43cd32131d"
+  integrity sha512-g6pCOaAB5Z987EwCBIDanRlramrgnWfrrYS8F/0axn2AL8EvyfAebDcLTSr48hac0G0rqC9ODp5LWaiupzl6Tw==
+
 csvjson@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/csvjson/-/csvjson-5.1.0.tgz#f055660824ebfb44dc089d901267fdc5d9e8414a"

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@vue/composition-api": "^1.6.2",
     "csvjson": "^5.1.0"
   }
 }
