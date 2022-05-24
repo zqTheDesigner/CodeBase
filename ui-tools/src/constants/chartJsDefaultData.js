@@ -1,23 +1,9 @@
-import { ref } from 'vue';
-
-const MOCK_30_DAYS = ref([['03-31', '2021']]);
-const MOCK_30_DAYS_AUTH_CALLS = ref([111]);
-const MOCK_30_DAYS_UNAUTH_CALLS = ref([21]);
-
-for (let i = 1; i < 15; i++) {
-  let day;
-  i < 9 ? (day = '0' + i) : (day = i);
-
-  MOCK_30_DAYS.value.push('04-' + day);
-
-  MOCK_30_DAYS_AUTH_CALLS.value.push(Math.floor(Math.random() * 100) + 20);
-  MOCK_30_DAYS_UNAUTH_CALLS.value.push(Math.floor(Math.random() * 30));
-}
-
-// Mock for the end date (with year)
-MOCK_30_DAYS.value.push(['04-15', '2022']);
-MOCK_30_DAYS_AUTH_CALLS.value.push(111);
-MOCK_30_DAYS_UNAUTH_CALLS.value.push(12);
+import {
+  // Mock data
+  MOCK_30_DAYS,
+  MOCK_30_DAYS_AUTH_CALLS,
+  MOCK_30_DAYS_UNAUTH_CALLS,
+} from './MOCKS';
 
 const lineChartData = {
   type: 'line',
@@ -181,27 +167,44 @@ const doughnutChartData = {
   },
 };
 
+import {
+  // Mock data for Pie Chart
+  MOCK_5_APIS,
+  MOCK_5_API_CALLS,
+} from './MOCKS';
+
 const pieChartData = {
   type: 'pie',
   data: {
-    labels: ['Red', 'Blue', 'Yellow'],
+    labels: MOCK_5_APIS.value,
     datasets: [
       {
         label: 'My First Dataset',
-        data: [300, 50, 100],
+        data: MOCK_5_API_CALLS,
         backgroundColor: [
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)',
+          'rgb(8,48,107)',
+          'rgb(8,81,156)',
+          'rgb(33,113,181)',
+          'rgb(107,174,214)',
+          'rgb(198,219,239)',
         ],
         hoverOffset: 4,
       },
     ],
   },
   options: {
+    tooltips: {
+      enabled: false,
+    },
     plugins: {
       legend: {
         position: 'right',
+        labels: {
+          boxWidth: 10,
+          boxHeight: 10,
+          padding: 30,
+          pointStyle: 'cirlce',
+        },
       },
     },
   },

@@ -13,7 +13,7 @@
           "
           :options="Object.keys(chartsDefault)"
         />
-        <canvas ref="chartJsContainer" style="max-height: 45vh" />
+        <canvas ref="chartJsContainer" style="max-height: 45vh; max-width:550px" />
       </div>
 
       <div class="col-6">
@@ -43,7 +43,7 @@ import Chart from 'chart.js/auto';
 const chart = ref();
 const chartJsContainer = ref(null);
 
-const chartType = ref('line');
+const chartType = ref('pie');
 
 const jsonSyntaxErr = ref('');
 
